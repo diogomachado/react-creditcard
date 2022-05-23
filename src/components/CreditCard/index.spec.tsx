@@ -1,5 +1,6 @@
 import { CreditCard } from './index';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import * as React from 'react';
 
 describe('CreditCard test', () => {
