@@ -1,5 +1,5 @@
-import * as React from "react";
-import "./styles.css";
+import * as React from 'react';
+import './styles.css';
 
 export interface PropsCreditCard {
   cardNumber: string;
@@ -9,7 +9,7 @@ export interface PropsCreditCard {
 export function CreditCard({ cardNumber, holderName }: PropsCreditCard) {
   return (
     <>
-      <div className="credit-card">
+      <div data-testid="credit-card" className="credit-card">
         <div className="credit-card-inner">
           <div className="credit-card-front">
             <div className="credit-card-company"></div>
