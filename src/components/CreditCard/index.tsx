@@ -15,12 +15,22 @@ export function CreditCard({ cardNumber, holderName }: PropsCreditCard) {
             <div className="credit-card-company"></div>
             <div className="credit-card-info">
               <div className="credit-card-chip"></div>
-              <h1 className="credit-card-number">{cardNumber}</h1>
+              <h1
+                data-testid="credit-card-number"
+                className="credit-card-number"
+              >
+                {cardNumber}
+              </h1>
               <div className="credit-card-valid">
                 <div className="credit-card-valid-text">Valid from</div>
                 <div className="credit-card-valid-date">12/23</div>
               </div>
-              <div className="credit-card-holder">{holderName}</div>
+              <div
+                data-testid="credit-card-holder"
+                className="credit-card-holder"
+              >
+                {holderName}
+              </div>
             </div>
           </div>
           <div className="credit-card-back">

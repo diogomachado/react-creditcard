@@ -4,14 +4,25 @@ import '@testing-library/jest-dom';
 import * as React from 'react';
 
 describe('CreditCard test', () => {
+  let credit = {
+    cardNumber: '1234 5678 9012 3456',
+    holderName: 'John Doe'
+  };
+
   it('should render the CreditCard component', () => {
     render(
       <CreditCard
-        cardNumber="1265  6545  6545  5646"
-        holderName="Holder Name"
+        cardNumber={credit.cardNumber}
+        holderName={credit.holderName}
       />
     );
 
     expect(screen.getByTestId('credit-card')).toBeInTheDocument();
+    expect(screen.getByTestId('credit-card-number')).toHaveTextContent(
+      credit.cardNumber
+    );
+    expect(screen.getByTestId('credit-card-holder')).toHaveTextContent(
+      credit.holderName
+    );
   });
 });
