@@ -1,7 +1,12 @@
-import React from "react";
+import * as React from "react";
 import "./styles.css";
 
-export function CreditCard({ cardNumber, holderName }) {
+export interface PropsCreditCard {
+  cardNumber: string;
+  holderName: string;
+}
+
+export function CreditCard({ cardNumber, holderName }: PropsCreditCard) {
   return (
     <>
       <div className="credit-card">
